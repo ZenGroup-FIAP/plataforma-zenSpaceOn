@@ -2,13 +2,12 @@ package zen.users;
 
 import java.util.Scanner;
 
-public abstract class Usuarios {
-	protected int codigoId;
-	protected String nome;
-	protected String senha;
-	protected String email;
-	protected String tipoUsuario;
-	protected Scanner sc = new Scanner(System.in);
+public abstract class Usuario {
+	private int codigoId;
+	private String nome;
+	private String senha;
+	private String email;
+	private Scanner sc = new Scanner(System.in);
 	
 	public int getCodigoId() {
 		return codigoId;
@@ -32,14 +31,6 @@ public abstract class Usuarios {
 	
 	public void setSenha(String senha) {
 		this.senha = senha;
-	}
-	
-	public String getTipoUsuario() {
-		return tipoUsuario;
-	}
-
-	public void setTipoUsuario(String tipoUsuario) {
-		this.tipoUsuario = tipoUsuario;
 	}
 
 	public String getEmail() {
@@ -66,6 +57,4 @@ public abstract class Usuarios {
 		String email = sc.next();
 		this.setEmail(email);
 	}
-	
-	
 }

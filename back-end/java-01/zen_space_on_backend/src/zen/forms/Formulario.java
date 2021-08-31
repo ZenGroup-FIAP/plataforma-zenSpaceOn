@@ -6,7 +6,6 @@ public abstract class Formulario {
 	private int codigoIdPaciente;
 	private int codigoIdPsicologo;
 	private int idFormulario;
-	private String tipoFormulario;
 	private Scanner sc = new Scanner(System.in);
 
 	public int getCodigoIdPaciente() {
@@ -33,14 +32,6 @@ public abstract class Formulario {
 		this.idFormulario = idFormulario;
 	}
 
-	public String getTipoFormulario() {
-		return tipoFormulario;
-	}
-
-	public void setTipoFormulario(String tipoFormulario) {
-		this.tipoFormulario = tipoFormulario;
-	}
-
 	public void cadastrar() {
 		
 		System.out.print("DIGITE O CODIGO ID DO PACIENTE: ");
@@ -50,5 +41,4 @@ public abstract class Formulario {
 		this.setCodigoIdPsicologo(sc.nextInt());
 		
 	}
-	
 }

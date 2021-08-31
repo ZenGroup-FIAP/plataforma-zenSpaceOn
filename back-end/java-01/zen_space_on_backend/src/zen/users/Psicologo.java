@@ -2,30 +2,22 @@ package zen.users;
 
 import java.util.Date;
 
-public class Psicologo extends Usuarios {
-
+public class Psicologo extends Usuario {
 	private Date horarioAtendimento;
 	private double ranking;
 	private double precoHora;
 	private String descPerfil;
 	
-	public Psicologo(int codigoId, String nome, String senha, String email, Date horarioAtendimento, double ranking,
-			double precoHora, String descPerfil) {
+	public Psicologo() {
 		super();
-		this.codigoId = codigoId;
-		this.nome = nome;
-		this.senha = senha;
-		this.email = email;
+	}
+
+	public Psicologo(Date horarioAtendimento, double ranking, double precoHora, String descPerfil) {
+		super();
 		this.horarioAtendimento = horarioAtendimento;
 		this.ranking = ranking;
 		this.precoHora = precoHora;
 		this.descPerfil = descPerfil;
-		this.tipoUsuario = "psicologo";
-	}
-	
-	public Psicologo() {
-		super();
-		this.tipoUsuario = "psicologo";
 	}
 
 	public Date getHorarioAtendimento() {
@@ -59,5 +51,4 @@ public class Psicologo extends Usuarios {
 	public void setDescPerfil(String descPerfil) {
 		this.descPerfil = descPerfil;
 	}
-	
 }
