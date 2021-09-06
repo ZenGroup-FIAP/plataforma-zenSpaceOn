@@ -3,13 +3,25 @@ package zen.users;
 import java.util.Scanner;
 
 public abstract class Usuario {
-	private int codigoId;
+	private Integer codigoId;
 	private String nome;
 	private String senha;
 	private String email;
 	private Scanner sc = new Scanner(System.in);
 	
-	public int getCodigoId() {
+	public Usuario() {
+		
+	}
+	
+	public Usuario(Integer codigoId, String nome, String senha, String email) {
+		super();
+		this.codigoId = codigoId;
+		this.nome = nome;
+		this.senha = senha;
+		this.email = email;
+	}
+
+	public Integer getCodigoId() {
 		return codigoId;
 	}
 	
@@ -43,8 +55,6 @@ public abstract class Usuario {
 	
 	// Método cadastrar usuario
 	public void cadastrar() {
-		
-		
 		System.out.print("INFORME O NOME: ");
 		String nome = sc.next();
 		this.setNome(nome);

@@ -8,13 +8,13 @@ public class Consulta extends Formulario {
 	private String laudo;
 	private Date data;
 	private Scanner sc = new Scanner(System.in);
-	
-	public Consulta(String desc, String laudo, Date data, Scanner sc) {
-		super();
+
+	public Consulta(Integer codigoIdPaciente, Integer codigoIdPsicologo, Integer idFormulario, String desc, String laudo,
+			Date data) {
+		super(codigoIdPaciente, codigoIdPsicologo, idFormulario);
 		this.desc = desc;
 		this.laudo = laudo;
 		this.data = data;
-		this.sc = sc;
 	}
 
 	public Consulta() {
