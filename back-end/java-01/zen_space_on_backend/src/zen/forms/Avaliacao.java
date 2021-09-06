@@ -2,14 +2,14 @@ package zen.forms;
 
 public class Avaliacao extends Formulario {
 	private String feedback;
-	private double nota;
+	private Double nota;
 	
 	public Avaliacao() {
 		super();
 	}
 
-	public Avaliacao(String feedback, double nota) {
-		super();
+	public Avaliacao(Integer codigoIdPaciente, Integer codigoIdPsicologo, Integer idFormulario, String feedback, Double nota) {
+		super(codigoIdPaciente, codigoIdPsicologo, idFormulario);
 		this.feedback = feedback;
 		this.nota = nota;
 	}
@@ -26,7 +26,7 @@ public class Avaliacao extends Formulario {
 		return nota;
 	}
 
-	public void setNota(double nota) {
+	public void setNota(Double nota) {
 		this.nota = nota;
 	}
 	
@@ -36,3 +36,4 @@ public class Avaliacao extends Formulario {
 	}
 	
 }
+
