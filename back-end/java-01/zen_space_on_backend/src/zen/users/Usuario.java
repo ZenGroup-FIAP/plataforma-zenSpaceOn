@@ -2,11 +2,14 @@ package zen.users;
 
 import java.util.Scanner;
 
+import zen.complements.Agenda;
+
 public abstract class Usuario {
 	private Integer codigoId;
 	private String nome;
 	private String senha;
 	private String email;
+	private Agenda agenda = new Agenda();
 	private Scanner sc = new Scanner(System.in);
 	
 	public Usuario() {
@@ -53,6 +56,10 @@ public abstract class Usuario {
 		this.email = email;
 	}
 	
+	public Agenda getAgenda() {
+		return agenda;
+	}
+
 	// Método cadastrar usuario
 	public void cadastrar() {
 		System.out.print("INFORME O NOME: ");

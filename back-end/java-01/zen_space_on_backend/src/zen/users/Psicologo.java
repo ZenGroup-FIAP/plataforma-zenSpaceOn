@@ -2,6 +2,8 @@ package zen.users;
 
 import java.util.Date;
 
+import zen.complements.Agenda;
+
 public class Psicologo extends Usuario {
 	private Date horarioAtendimento;
 	private Integer ranking;
