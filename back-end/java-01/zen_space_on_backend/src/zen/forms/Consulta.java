@@ -5,16 +5,19 @@ import java.util.Scanner;
 
 public class Consulta extends Formulario {
 	private String desc;
-	private String laudo;
+	private Laudo laudo;
 	private Date data;
+	private Double tempoConsulta;
+	
 	private Scanner sc = new Scanner(System.in);
 
-	public Consulta(Integer codigoIdPaciente, Integer codigoIdPsicologo, Integer idFormulario, String desc, String laudo,
-			Date data) {
+	public Consulta(Integer codigoIdPaciente, Integer codigoIdPsicologo, Integer idFormulario, String desc, Laudo laudo,
+			Date data, Double tempoConsulta) {
 		super(codigoIdPaciente, codigoIdPsicologo, idFormulario);
 		this.desc = desc;
 		this.laudo = laudo;
 		this.data = data;
+		this.tempoConsulta = tempoConsulta;
 	}
 
 	public Consulta() {
@@ -29,11 +32,11 @@ public class Consulta extends Formulario {
 		this.desc = desc;
 	}
 
-	public String getLaudo() {
+	public Laudo getLaudo() {
 		return laudo;
 	}
 
-	public void setLaudo(String laudo) {
+	public void setLaudo(Laudo laudo) {
 		this.laudo = laudo;
 	}
 
@@ -45,6 +48,14 @@ public class Consulta extends Formulario {
 		this.data = data;
 	}
 	
+	public Double getTempoConsulta() {
+		return tempoConsulta;
+	}
+
+	public void setTempoConsulta(Double tempoConsulta) {
+		this.tempoConsulta = tempoConsulta;
+	}
+
 	@Override
 	public void cadastrar() {
 		// Fazer sistema de cadastro
