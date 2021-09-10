@@ -2,11 +2,11 @@ package zen.users;
 
 import java.util.Date;
 
-import zen.users.interfaces.Validavel;
+import zen.complements.Agenda;
 
-public class Psicologo extends Usuario implements Validavel {
+public class Psicologo extends Usuario {
 	private Date horarioAtendimento;
-	private Double ranking;
+	private Integer ranking;
 	private Double precoHora;
 	private String descPerfil;
 	
@@ -14,7 +14,7 @@ public class Psicologo extends Usuario implements Validavel {
 		super();
 	}
 
-	public Psicologo(Integer codigoId, String nome, String senha, String email, Date horarioAtendimento, Double ranking,
+	public Psicologo(Integer codigoId, String nome, String senha, String email, Date horarioAtendimento, Integer ranking,
 			Double precoHora, String descPerfil) {
 		super(codigoId, nome, senha, email);
 		this.horarioAtendimento = horarioAtendimento;
@@ -31,11 +31,11 @@ public class Psicologo extends Usuario implements Validavel {
 		this.horarioAtendimento = horarioAtendimento;
 	}
 
-	public Double getRanking() {
+	public Integer getRanking() {
 		return ranking;
 	}
 
-	public void setRanking(Double ranking) {
+	public void setRanking(Integer ranking) {
 		this.ranking = ranking;
 	}
 
@@ -55,8 +55,4 @@ public class Psicologo extends Usuario implements Validavel {
 		this.descPerfil = descPerfil;
 	}
 
-	@Override
-	public void validar(String cpf) {
-		
-	}
 }

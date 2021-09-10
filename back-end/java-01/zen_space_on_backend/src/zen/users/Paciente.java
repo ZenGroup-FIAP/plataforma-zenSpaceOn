@@ -1,9 +1,8 @@
 package zen.users;
 
-import zen.users.enums.Assinatura;
-import zen.users.interfaces.Validavel;
+import zen.complements.Assinatura;
 
-public class Paciente extends Usuario implements Validavel {
+public class Paciente extends Usuario {
 	private Assinatura assinatura;
 	
 	public Paciente() {
@@ -19,12 +18,4 @@ public class Paciente extends Usuario implements Validavel {
 		return assinatura;
 	}
 
-	public void setAssinatura(Assinatura assinatura) {
-		this.assinatura = assinatura;
-	}
-
-	@Override
-	public void validar(String cpf) {
-		// VALIDAÇÃO DO CPF	
-	}
 }
