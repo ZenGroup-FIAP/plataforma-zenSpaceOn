@@ -1,6 +1,6 @@
 package zen.users;
 
-import zen.users.enums.Assinatura;
+import zen.complements.Assinatura;
 
 public class Paciente extends Usuario {
 	private Assinatura assinatura;
@@ -16,10 +16,6 @@ public class Paciente extends Usuario {
 
 	public Assinatura getAssinatura() {
 		return assinatura;
-	}
-
-	public void setAssinatura(Assinatura assinatura) {
-		this.assinatura = assinatura;
 	}
 
 }
