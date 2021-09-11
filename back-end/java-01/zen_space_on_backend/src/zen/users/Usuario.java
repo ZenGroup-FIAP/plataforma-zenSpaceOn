@@ -59,19 +59,4 @@ public abstract class Usuario {
 	public Agenda getAgenda() {
 		return agenda;
 	}
-
-	// Método cadastrar usuario
-	public void cadastrar() {
-		System.out.print("INFORME O NOME: ");
-		String nome = sc.next();
-		this.setNome(nome);
-		
-		System.out.print("INFORME A SENHA: ");
-		String senha = sc.next();
-		this.setSenha(senha);
-		
-		System.out.print("INFORME O EMAIL: ");
-		String email = sc.next();
-		this.setEmail(email);
-	}
 }

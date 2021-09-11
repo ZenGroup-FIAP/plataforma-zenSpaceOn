@@ -1,5 +1,8 @@
 package zen.forms;
 
+import zen.users.Paciente;
+import zen.users.Psicologo;
+
 public class Avaliacao extends Formulario {
 	private String feedback;
 	private Double nota;
@@ -8,8 +11,8 @@ public class Avaliacao extends Formulario {
 		super();
 	}
 
-	public Avaliacao(Integer codigoIdPaciente, Integer codigoIdPsicologo, Integer idFormulario, String feedback, Double nota) {
-		super(codigoIdPaciente, codigoIdPsicologo, idFormulario);
+	public Avaliacao(Paciente paciente, Psicologo psicologo, Integer idFormulario, String feedback, Double nota) {
+		super(paciente, psicologo, idFormulario);
 		this.feedback = feedback;
 		this.nota = nota;
 	}
@@ -28,11 +31,6 @@ public class Avaliacao extends Formulario {
 
 	public void setNota(Double nota) {
 		this.nota = nota;
-	}
-	
-	@Override
-	public void cadastrar() {
-		// Implementar cadastro
 	}
 	
 }

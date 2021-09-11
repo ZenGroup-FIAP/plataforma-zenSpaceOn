@@ -10,9 +10,8 @@ public class Assinatura {
 		
 	}
 
-	public Assinatura(TiposAssinatura tipoDeAssinatura, Double valorAssinatura) {
+	public Assinatura(TiposAssinatura tipoDeAssinatura) {
 		this.tipoDeAssinatura = tipoDeAssinatura;
-		this.valorAssinatura = valorAssinatura;
 	}
 
 	public TiposAssinatura getTipoDeAssinatura() {

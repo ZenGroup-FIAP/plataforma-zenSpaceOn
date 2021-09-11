@@ -1,27 +1,27 @@
 package zen.forms;
 
 import java.util.Date;
-import java.util.Scanner;
+
+import zen.users.Paciente;
+import zen.users.Psicologo;
 
 public class Consulta extends Formulario {
 	private String desc;
 	private Laudo laudo;
 	private Date data;
 	private Double tempoConsulta;
-	
-	private Scanner sc = new Scanner(System.in);
 
-	public Consulta(Integer codigoIdPaciente, Integer codigoIdPsicologo, Integer idFormulario, String desc, Laudo laudo,
-			Date data, Double tempoConsulta) {
-		super(codigoIdPaciente, codigoIdPsicologo, idFormulario);
+	public Consulta() {
+		super();
+	}
+	
+	public Consulta(Paciente paciente, Psicologo psicologo, Integer idFormulario, String desc, Laudo laudo, Date data,
+			Double tempoConsulta) {
+		super(paciente, psicologo, idFormulario);
 		this.desc = desc;
 		this.laudo = laudo;
 		this.data = data;
 		this.tempoConsulta = tempoConsulta;
-	}
-
-	public Consulta() {
-		super();
 	}
 
 	public String getDesc() {
@@ -55,10 +55,18 @@ public class Consulta extends Formulario {
 	public void setTempoConsulta(Double tempoConsulta) {
 		this.tempoConsulta = tempoConsulta;
 	}
-
-	@Override
-	public void cadastrar() {
-		// Fazer sistema de cadastro
-		sc.close();
+	
+	public Double valorConsulta() {
+		Double valorConsulta = null; 
+		
+		if (paciente.getConsultasGratuitas() <= 0) {
+			valorConsulta = psicologo.getPrecoHora() * tempoConsulta;			
+		} else if (paciente.getConsultasGratuitas() > 0) {
+			paciente.setConsultasGratuitas(paciente.getConsultasGratuitas() - 1);
+			valorConsulta = 0.0;
+		}
+		
+		return valorConsulta;
 	}
+	
 }
