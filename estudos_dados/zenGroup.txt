@@ -1,0 +1,17 @@
+ZenGroup - 
+Alfonso Matsuoka Schiavelli - RM87336
+Felipe Kim - RM87067
+Lucas Itiro Feitosa Matutani - RM87283
+Matheus Feitosa Silva - RM86782
+Matheus Cruz Oliveira - RM88987
+Luís Ricardo Giovani Fogaça Duccini - RM88360
+
+1 - A plataforma zenSpaceOn pretende coletar dados para que nossa inteligência artifical Olivia consiga identificar
+qual seria o problema do paciente por meio de um chat. Para que os dados sejam coletados o usuário deverá concordar
+com o compartilhamento e processamento dos seus dados, se não ele ainda poderá usar a plataforma normalmente sem 
+o compartilhamento dos dados.
+
+2 - O arquivo data_01 possui dados coletados do COVIDSTRESS dentre eles a média de idade das pessoas de cada país,
+a proporção de pessoas que continuaram com a vida normal durante a pandemia, a proporção de pessoas que vivem sozinhas,
+proporção das pessoas que tiveram pouco impacto em suas vidas devido a pandemia, proporção de pessoas que ficaram isoladas 
+em hospitais ou similares e proporção de pessoas que ficaram isoladas durante a pandemia.
