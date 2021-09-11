@@ -1,54 +1,33 @@
 package zen.forms;
 
-import java.util.Scanner;
+import zen.users.Paciente;
+import zen.users.Psicologo;
 
 public abstract class Formulario {
-	private Integer codigoIdPaciente;
-	private Integer codigoIdPsicologo;
+	protected Paciente paciente;
+	protected Psicologo psicologo;
 	private Integer idFormulario;
-	private Scanner sc = new Scanner(System.in);
 	
 	public Formulario() {
 		
 	}
 
-	public Formulario(Integer codigoIdPaciente, Integer codigoIdPsicologo, Integer idFormulario) {
-		this.codigoIdPaciente = codigoIdPaciente;
-		this.codigoIdPsicologo = codigoIdPsicologo;
+	public Formulario(Paciente paciente, Psicologo psicologo, Integer idFormulario) {
+		this.paciente = paciente;
+		this.psicologo = psicologo;
 		this.idFormulario = idFormulario;
 	}
 
-	public Integer getCodigoIdPaciente() {
-		return codigoIdPaciente;
+	public Paciente getPaciente() {
+		return paciente;
 	}
 
-	public void setCodigoIdPaciente(Integer codigoIdPaciente) {
-		this.codigoIdPaciente = codigoIdPaciente;
-	}
-
-	public Integer getCodigoIdPsicologo() {
-		return codigoIdPsicologo;
-	}
-
-	public void setCodigoIdPsicologo(Integer codigoIdPsicologo) {
-		this.codigoIdPsicologo = codigoIdPsicologo;
+	public Psicologo getPsicologo() {
+		return psicologo;
 	}
 	
 	public Integer getIdFormulario() {
 		return idFormulario;
 	}
 
-	public void setIdFormulario(Integer idFormulario) {
-		this.idFormulario = idFormulario;
-	}
-
-	public void cadastrar() {
-		
-		System.out.print("DIGITE O CODIGO ID DO PACIENTE: ");
-		this.setCodigoIdPaciente(sc.nextInt());
-	
-		System.out.print("DIGITE O CODIGO ID DO PSICÓLOGO: ");
-		this.setCodigoIdPsicologo(sc.nextInt());
-		
-	}
 }
